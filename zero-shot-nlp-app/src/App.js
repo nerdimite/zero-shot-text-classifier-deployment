@@ -34,20 +34,45 @@ const Results = (props) => {
 };
 
 function App() {
+  const [text, setText] = useState("");
+  const [classes, setClasses] = useState([]);
+  const [key, setKey] = useState("");
   const [processing, setProcessing] = useState(false);
   const [results, setResults] = useState([]);
 
   const predict = async () => {
     setProcessing(true);
-    setTimeout(() => {
-      setProcessing(false);
-      setResults([
-        { class: "Science", prob: 0.8 },
-        { class: "Business", prob: 0.3 },
-        { class: "Finance", prob: 0.5 },
-        { class: "Finance", prob: 0.63 },
-      ]);
-    }, 500);
+
+    try {
+      const raw_response = await fetch(
+        "https://api.cellstrathub.com/synchronous",
+        {
+          headers: {
+            "Content-Type": "application/json",
+            Accept: "application/json",
+            "x-api-key": key,
+          },
+          method: "POST",
+          body: JSON.stringify({
+            service_id: "zero-shot",
+            input: {
+              text: text,
+              classes: classes,
+            },
+          }),
+        }
+      );
+      const response = await raw_response.json();
+      console.log(response);
+      const body = JSON.parse(response["body"]);
+      const output = JSON.parse(body["output"]);
+      setResults(output);
+    } catch (err) {
+      console.log(err);
+      alert("Please Retry!");
+    }
+
+    setProcessing(false);
   };
 
   return (
@@ -168,15 +193,28 @@ function App() {
           </a>
         </div>
         <Textbox
-          label="Enter Different Classes (separated by comma `,`)"
+          label="Enter your API Key"
+          type="password"
+          onChange={(e) => {
+            setKey(e.target.value);
+          }}
+        />
+        <Textbox
+          label="Enter different classes (separated by comma `,`)"
           placeholder="Example: Sports, Science, Technology, Business"
+          onChange={(e) => {
+            setClasses(e.target.value.split(","));
+          }}
         />
         <Textarea
-          label="Enter the Input Text you want to Classify"
+          label="Enter the input text you want to classify"
           placeholder="Deep Learning is very powerful..."
+          onChange={(e) => {
+            setText(e.target.value);
+          }}
         />
         <Button
-          label="Make Zero Shot Prediction"
+          label="Make Zero Shot Classification"
           disabled={processing}
           onClick={async () => {
             await predict();
@@ -184,12 +222,7 @@ function App() {
         />
         {results &&
           results.map((item, idx) => {
-            return (
-              <Results
-                label={item.class}
-                value={Math.round(item.prob * 100, 3)}
-              />
-            );
+            return <Results label={item[0]} value={item[1] * 100} />;
           })}
       </Container>
     </div>
