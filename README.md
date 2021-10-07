@@ -6,6 +6,12 @@ Zero-Shot Text Classification is based on the Natural Language Inference (NLI) t
 
 ## TODO
 
+### Code
+
+- [x] React App
+- [x] Zero Shot Classifier
+- [x] Inference Scripts
+
 ### PPT
 
 - [ ] Introduction
@@ -17,9 +23,3 @@ Zero-Shot Text Classification is based on the Natural Language Inference (NLI) t
 - [ ] Initializing
 - [ ] Integration
 - [ ] Build and Deployment
-
-### Code
-
-- [x] React App
-- [x] Zero Shot Classifier
-- [x] Inference Scripts
