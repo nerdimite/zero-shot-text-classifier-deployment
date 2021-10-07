@@ -1,2 +1,11 @@
-# zero-shot-text-classifier-deployment
-Deployment of a Zero Shot Text Classifier (NLI) model with CellStrat Hub API
+# Deploying a Zero Shot Classifier on CellStrat Hub
+
+## PPT
+- Introduction
+- Natural Language Inference Task
+- NLI to Zero Shot
+- CellStrat Hub API
+- Structuring the API
+- Initializing
+- Integration
+- Build and Deployment
