@@ -222,7 +222,9 @@ function App() {
         />
         {results &&
           results.map((item, idx) => {
-            return <Results label={item[0]} value={item[1] * 100} />;
+            return (
+              <Results label={item[0]} value={(item[1] * 100).toFixed(2)} />
+            );
           })}
       </Container>
     </div>
