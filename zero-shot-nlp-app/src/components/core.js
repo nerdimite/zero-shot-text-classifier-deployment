@@ -14,7 +14,7 @@ export const Textbox = (props) => {
       <label className="text-gray-600">{props.label}</label>
       <input
         type="text"
-        className="w-full mt-1 px-4 py-2 shadow-md border rounded-md text-gray-700 focus:outline-none focus:border-blue-600"
+        className="w-full mt-1 px-4 py-2 shadow-md focus:shadow-none border rounded-md text-gray-700 focus:outline-none focus:border-blue-600"
         {...props}
       />
     </div>
@@ -27,7 +27,7 @@ export const Textarea = (props) => {
       <label className="text-gray-600">{props.label}</label>
       <textarea
         type="text"
-        className="w-full resize-none mt-1 px-4 py-2 shadow-md border rounded-md text-gray-700 focus:outline-none focus:border-blue-600"
+        className="w-full resize-none mt-1 px-4 py-2 shadow-md focus:shadow-none border rounded-md text-gray-700 focus:outline-none focus:border-blue-600"
         rows="5"
         {...props}
       />
