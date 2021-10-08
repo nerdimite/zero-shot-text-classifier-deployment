@@ -36,9 +36,19 @@ _See example below where the highest entailment is for `technology`_
 
 ### Web App
 
+Before you run any of the following commands, change directory to [zero-shot-nlp-app](zero-shot-nlp-app/)
+
+#### Installation
+
+Before you can start the web app, you need to install the dependencies of the application. This can be done with,
+
+```
+yarn install
+```
+
 #### Development
 
-To start the development server of the app, change directory to [zero-shot-nlp-app](zero-shot-nlp-app/) folder and run,
+To start the development server of the app, run,
 
 ```
 yarn start
