@@ -69,7 +69,9 @@ function App() {
       setResults(output);
     } catch (err) {
       console.log(err);
-      alert("Please Retry!");
+      alert(
+        "Model seems to be Cold, Loading the Model in Memory... Please try again!"
+      );
     }
 
     setProcessing(false);
