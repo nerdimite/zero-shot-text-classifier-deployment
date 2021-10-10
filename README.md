@@ -2,7 +2,7 @@
 
 This repository contains the End-to-End source code for deploying a Zero-Shot Text Classifier as a REST API using [CellStrat Hub](https://cellstrathub.com) and integrating the API into a React App.
 
-This repository will be presented as part of the Workshop on CellStrat Hub API which can be [RSVP'd here](https://www.meetup.com/Disrupt-4-0/events/280958772/)
+This repository was presented as part of the [Workshop on CellStrat Hub API](https://www.meetup.com/Disrupt-4-0/events/280958772/)
 
 ## About the Model
 
@@ -32,7 +32,7 @@ _See example below where the highest entailment is for `technology`_
 
 ### Model Deployment
 
-[RSVP to the Workshop here](https://www.meetup.com/Disrupt-4-0/events/280958772/)
+Blog coming soon!
 
 ### Web App
 
