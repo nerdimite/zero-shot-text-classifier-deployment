@@ -1,8 +1,6 @@
 # Deploying a Zero Shot Classifier on CellStrat Hub
 
-This repository contains the End-to-End source code for deploying a Zero-Shot Text Classifier as a REST API using [CellStrat Hub](https://cellstrathub.com) and integrating the API into a React App.
-
-This repository will be presented as part of the Workshop on CellStrat Hub API which can be [RSVP'd here](https://www.meetup.com/Disrupt-4-0/events/280958772/)
+This repository contains the End-to-End source code for deploying a Zero-Shot Text Classifier as a REST API using [CellStrat Hub](https://cellstrathub.com) and integrating the API into a Nextjs App.
 
 ## About the Model
 
@@ -32,11 +30,11 @@ _See example below where the highest entailment is for `technology`_
 
 ### Model Deployment
 
-[RSVP to the Workshop here](https://www.meetup.com/Disrupt-4-0/events/280958772/)
+[Learn More About Deployment Here](https://docs.cellstrathub.com/HubAPI%20Deployment%20%F0%9F%9A%80/quickstart)
 
 ### Web App
 
-Before you run any of the following commands, change directory to [zero-shot-nlp-app](zero-shot-nlp-app/)
+Before you run any of the following commands, change directory to [zstc-app](zstc-app/)
 
 #### Installation
 
@@ -54,7 +52,7 @@ To start the development server of the app, run,
 yarn start
 ```
 
-This starts the react app in `localhost:3000` or `http://<hub-workspace-url>:3000` (if running on CellStrat Hub Workspace)
+This starts the react app in `localhost:3000` or `http://<hub-workspace-public-ip>:3000` (if running on CellStrat Hub Workspace)
 
 #### Production Build
 
