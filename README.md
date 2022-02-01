@@ -34,7 +34,7 @@ _See example below where the highest entailment is for `technology`_
 
 ### Web App
 
-Before you run any of the following commands, change directory to [zstc-app](zstc-app/)
+Before you run any of the following commands, change directory to [zstc-web-app](zstc-web-app/)
 
 #### Installation
 
